@@ -31,8 +31,7 @@ export function Hero() {
 
         <div className="mb-16 flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href="https://github.com/wolfken26/pasteplay-web/releases/download/v1.0.0/PastePlay%20Setup%201.0.0.exe"
-            download="PastePlay-v1-Setup.exe"
+            href="https://www.dropbox.com/scl/fi/f4j3zxdhzlb7z4e68kdeo/PastePlay-Setup-1.0.0.exe?rlkey=rudad2q0js3des35gqp8saaee&st=tutzuaxl&dl=1"
             className="group px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-lg font-bold text-lg hover:shadow-2xl hover:shadow-blue-500/50 transition-all inline-flex items-center justify-center gap-2"
           >
             <Download className="w-5 h-5" />
