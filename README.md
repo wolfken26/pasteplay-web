@@ -28,32 +28,6 @@ This landing page is built with performance and aesthetics in mind:
 
 ---
 
-## 💻 Local Development
-
-Follow these steps to run the landing page site locally:
-
-1.  **Clone the repository:**
-    ```bash
-    git clone https://github.com/wolfken26/pasteplay-web.git
-    cd pasteplay-web
-    ```
-
-2.  **Install dependencies:**
-    ```bash
-    npm install
-    ```
-
-3.  **Start dev server:**
-    ```bash
-    npm run dev
-    ```
-    Open your browser and navigate to `http://localhost:5173`.
-
-4.  **Build for production:**
-    ```bash
-    npm run build
-    ```
-    The compiled build will be generated in the `dist` directory, ready to be deployed to Vercel, Netlify, or GitHub Pages.
 
 ---
 
