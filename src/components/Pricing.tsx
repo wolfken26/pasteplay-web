@@ -14,7 +14,7 @@ const proFeatures = [
   'Unlimited text-to-speech',
   'Hotkey customization',
   'Tray mode + background mode',
-  'History / saved clips / pinned favorites',
+  'History / pinned favorites',
   'Download transcript',
   'Review saved clips',
   'Privacy Mode (Zero Data Retention)',
