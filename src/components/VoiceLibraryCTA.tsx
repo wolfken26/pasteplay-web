@@ -58,7 +58,7 @@ export function VoiceLibraryCTA() {
                         <div className="lg:w-1/2 text-center lg:text-left">
                             <div className="inline-flex items-center gap-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full px-4 py-2 mb-6 transition-colors group-hover:bg-cyan-500/20">
                                 <Mic className="w-4 h-4 text-cyan-400" />
-                                <span className="text-cyan-400 text-xs font-black uppercase tracking-widest">Premium Voices</span>
+                                <span className="text-cyan-400 text-xs font-black uppercase tracking-widest">Premium Voice</span>
                                 <span className="bg-cyan-500 text-black text-[10px] px-2 py-0.5 rounded-full font-black uppercase ml-1 shadow-lg shadow-cyan-500/20">
                                     New
                                 </span>
@@ -72,7 +72,7 @@ export function VoiceLibraryCTA() {
                             </h2>
 
                             <p className="text-gray-400 text-lg mb-8 max-w-lg mx-auto lg:mx-0 leading-relaxed">
-                                Browse our curated library of premium AI voices. From warm and friendly to professional business tones — pick the voice that matches your vibe.
+                                Experience our premium AI voice, Bella. Warm, friendly, and conversational — she's the perfect voice to bring your text to life.
                             </p>
 
                             <div className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
@@ -80,7 +80,7 @@ export function VoiceLibraryCTA() {
                                     to="/voices"
                                     className="px-8 py-4 bg-white text-black rounded-2xl font-black text-lg hover:bg-cyan-400 transition-all flex items-center gap-2 group/btn shadow-xl shadow-cyan-500/10 hover:shadow-cyan-500/30 hover:-translate-y-1"
                                 >
-                                    Explore Voice Library
+                                    Meet Bella
                                     <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" />
                                 </Link>
                                 <div className="flex items-center gap-2 text-gray-500 text-sm font-bold">
