@@ -4,8 +4,8 @@ const freeFeatures = [
   'Instant paste → speak',
   'Basic system voices',
   'Works offline',
-  '20+ major languages',
-  'Max 2,000 characters per paste',
+  'Only English for now',
+  'Max 3,000 characters per paste',
   'Privacy Mode (Zero Data Retention)',
   'Local storage',
 ];
@@ -15,13 +15,13 @@ const proFeatures = [
   'Hotkey customization',
   'Tray mode + background mode',
   'History / saved clips / pinned favorites',
-  '100+ languages',
+
   'Privacy Mode (Zero Data Retention)',
   'Local storage',
   'Priority support + feature requests',
   'Early access to new features',
   'Lightning Fast search using keywords',
-  'AI premium voices (Bella) — browse the Voice Library',
+  'AI Premium Voice (Bella)',
 ];
 
 interface PricingProps {

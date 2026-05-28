@@ -23,7 +23,7 @@ export function ProductDescription() {
             </p>
 
             <p className="text-gray-400 leading-relaxed mb-8">
-              It starts with a single global hotkey, auto-fills from the clipboard, and plays using local system voices for instant reliability and privacy. Free features include max 2,000 characters per paste and offline operation.
+              It starts with a single global hotkey, auto-fills from the clipboard, and plays using local system voices for instant reliability and privacy. Free features include max 3,000 characters per paste and offline operation.
             </p>
 
             <div className="space-y-4">
@@ -58,7 +58,7 @@ export function ProductDescription() {
                 <ul className="space-y-3 text-sm">
                   <li className="flex gap-3">
                     <span className="text-cyan-400 font-bold">✓</span>
-                    <span className="text-gray-300">Max 2,000 characters per paste</span>
+                    <span className="text-gray-300">Max 3,000 characters per paste</span>
                   </li>
                   <li className="flex gap-3">
                     <span className="text-cyan-400 font-bold">✓</span>
@@ -92,7 +92,7 @@ export function ProductDescription() {
                   </li>
                   <li className="flex gap-3">
                     <span className="text-blue-400 font-bold">✓</span>
-                    <span className="text-gray-300">Coming: Premium AI voices</span>
+                    <span className="text-gray-300">Coming: Premium AI Voice (Bella)</span>
                   </li>
                 </ul>
               </div>
