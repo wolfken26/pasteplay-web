@@ -15,7 +15,8 @@ const proFeatures = [
   'Hotkey customization',
   'Tray mode + background mode',
   'History / saved clips / pinned favorites',
-
+  'Download transcript',
+  'Review saved clips',
   'Privacy Mode (Zero Data Retention)',
   'Local storage',
   'Priority support + feature requests',
