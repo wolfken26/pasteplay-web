@@ -25,7 +25,7 @@ const faqs = [
   },
   {
     question: 'Do I need to run PastePlay as Administrator?',
-    answer: 'Yes — for best results, right-click the PastePlay shortcut and select "Run as Administrator." This allows PastePlay\'s global hotkeys to capture text from elevated applications like Task Manager or certain enterprise tools.',
+    answer: 'You do not need to run as Admin. However, for better results, right-click the PastePlay shortcut and select "Run as Administrator." This allows PastePlay\'s global hotkeys to capture text from elevated applications like Task Manager or certain enterprise tools.',
   },
 ];
 
