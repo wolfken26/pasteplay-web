@@ -56,7 +56,7 @@ export function Hero() {
         </div>
 
         <p className="text-sm text-gray-400 mt-12 mb-12">
-          Highlight any text, pick your hotkey (e.g., Ctrl+Z or Command+Z), and start listening.
+          Highlight any text, pick your hotkey (e.g., Ctrl+X or Command+Z), and start listening.
         </p>
 
         <motion.div
