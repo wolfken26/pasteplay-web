@@ -9,11 +9,11 @@ const faqs = [
   },
   {
     question: 'Which platforms are supported?',
-    answer: 'Windows and macOS for the first release. Linux and mobile experiences are in the roadmap.',
+    answer: 'Only Windows for now.',
   },
   {
     question: 'Do I need an account?',
-    answer: 'No for the free features. Signing in is required to enable subscription features and multi-device entitlements.',
+    answer: 'No for the free features. Signing in is required to enable subscription features.',
   },
   {
     question: 'How do I update?',
