@@ -1,3 +1,4 @@
+<img width="165" height="165" alt="favicon" src="https://github.com/user-attachments/assets/327d067a-0bff-4edc-9541-e444528ac716" />
 # PastePlay Landing Page
 
 The official marketing and download website for **[PastePlay](https://www.pasteplay.app)** — a fast, offline text-to-speech (TTS) companion app for Windows.
