@@ -5,4 +5,5 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [react()],
   base: '/', // Use absolute paths for SPAs with routing
+  envPrefix: ['VITE_', 'SUPABASE_'],
 });
