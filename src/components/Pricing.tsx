@@ -1,29 +1,105 @@
-import { Check, Star } from 'lucide-react';
+import { Check, Star, ChevronDown } from 'lucide-react';
+import { useState } from 'react';
 
 const freeFeatures = [
   'Instant paste → speak',
   'Basic system voices',
   'Works offline',
-  'Only English for now',
   'Max 3,000 characters per paste',
+  'Tray mode + background mode',
   'Privacy Mode (Zero Data Retention)',
   'Local storage',
 ];
 
 const proFeatures = [
-  'Unlimited text-to-speech',
-  'Hotkey customization',
-  'Tray mode + background mode',
-  'History / pinned favorites',
-  'Download transcript',
-  'Review saved clips',
-  'Privacy Mode (Zero Data Retention)',
-  'Local storage',
-  'Priority support + feature requests',
-  'Early access to new features',
-  'Lightning Fast search using keywords',
-  'AI Premium Voice (Bella)',
+  {
+    label: 'Unlimited text-to-speech',
+    description:
+      'Listen to documents, books, articles, or anything of any length — no character limits, no interruptions. Paste a full research paper or an entire e-book and let PastePlay handle it all.',
+  },
+  {
+    label: 'Hotkey customization',
+    description:
+      'Choose any keyboard shortcut combo that fits your workflow — Ctrl+Z, Ctrl+X, Alt+R, or any custom combination. PastePlay fires the instant you press it, no matter what app you\'re in.',
+  },
+  {
+    label: 'History / pinned favorites',
+    description:
+      'Every clip you\'ve read is saved locally so you can replay it later. Pin your most-used passages to the top for quick access. Even 100,000 clips take up less disk space than a single photo.',
+  },
+  {
+    label: 'Download transcript',
+    description:
+      'Save the text of anything you\'ve read as a local .txt file with one click. Perfect for archiving articles, research notes, or anything you want to keep as a local reference.',
+  },
+  {
+    label: 'Review saved clips',
+    description:
+      'Open your full clip library and replay any saved snippet at any time. Browse your reading history, re-listen to important passages, and manage your collection — all stored locally.',
+  },
+  {
+    label: 'Privacy Mode (Zero Data Retention)',
+    description:
+      'When Privacy Mode is on, PastePlay automatically purges your clipboard text and reading history the moment playback ends. Nothing is stored, nothing is logged — complete zero-trace reading.',
+  },
+  {
+    label: 'Local storage',
+    description:
+      'All settings, history, and saved clips are stored 100% on your computer. Nothing is sent to external servers. Your data is yours — always accessible offline, always private.',
+  },
+  {
+    label: 'Priority support + feature requests',
+    description:
+      'Get direct access to the developer. Pro members jump the support queue and can submit feature requests that directly influence the roadmap. Your feedback shapes PastePlay\'s future.',
+  },
+  {
+    label: 'Early access to new features',
+    description:
+      'Be the first to try beta features — new voice styles, UI themes, cross-application integrations, and experimental tools — before they roll out to everyone.',
+  },
+  {
+    label: 'Lightning Fast search using keywords',
+    description:
+      'Instantly filter through your entire clip history in real-time using the built-in keyword search bar. Find any passage you\'ve ever read in seconds, no matter how large your library.',
+  },
+  {
+    label: 'AI Premium Voice (Bella)',
+    description:
+      'Unlock ultra-realistic, natural-sounding AI voices that make listening to long papers, articles, or books feel like a premium audiobook experience — far beyond standard system TTS voices.',
+  },
 ];
+
+function ProFeatureItem({ feature }: { feature: { label: string; description: string } }) {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <li className="border border-gray-700/40 rounded-lg overflow-hidden transition-all duration-200 hover:border-cyan-500/30">
+      <button
+        onClick={() => setOpen(!open)}
+        className="w-full flex items-center justify-between gap-3 px-4 py-3 text-left group"
+      >
+        <div className="flex items-center gap-3 min-w-0">
+          <div className={`mt-0 w-5 h-5 rounded-full flex items-center justify-center shrink-0 transition-colors ${open ? 'bg-cyan-500' : 'bg-cyan-500/20'}`}>
+            <Check className={`w-3 h-3 transition-colors ${open ? 'text-black' : 'text-cyan-400'}`} />
+          </div>
+          <span className={`text-sm font-medium transition-colors ${open ? 'text-white' : 'text-gray-300 group-hover:text-white'}`}>
+            {feature.label}
+          </span>
+        </div>
+        <ChevronDown
+          className={`w-4 h-4 shrink-0 transition-all duration-300 ${open ? 'rotate-180 text-cyan-400' : 'text-gray-500 group-hover:text-cyan-400'}`}
+        />
+      </button>
+      {open && (
+        <div className="px-4 pb-4 border-t border-gray-700/40 bg-black/20">
+          <p className="text-gray-400 text-sm leading-relaxed pt-3">
+            {feature.description}
+          </p>
+        </div>
+      )}
+    </li>
+  );
+}
 
 interface PricingProps {
   onProAction?: (plan: 'monthly' | 'yearly') => void;
@@ -86,16 +162,16 @@ export function Pricing({ onProAction }: PricingProps) {
               </div>
             </div>
 
-            <ul className="space-y-4 mb-8">
+            {/* Includes all Free features badge */}
+            <div className="mb-6 py-2.5 px-3.5 rounded-xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-xs font-bold flex items-center gap-2">
+              <Check className="w-4 h-4 text-cyan-400 shrink-0" />
+              <span>Includes all Free features (Tray &amp; background mode, offline, etc.)</span>
+            </div>
+
+            {/* Interactive Pro Features List */}
+            <ul className="space-y-2 mb-8">
               {proFeatures.map((feature, index) => (
-                <li key={index} className="flex items-start gap-3 group/item">
-                  <div className="mt-1 w-5 h-5 rounded-full bg-cyan-500/20 flex items-center justify-center shrink-0 group-hover/item:bg-cyan-500 transition-colors">
-                    <Check className="w-3 h-3 text-cyan-400 group-hover/item:text-black transition-colors" />
-                  </div>
-                  <span className="text-gray-300 group-hover/item:text-white transition-colors">
-                    {feature}
-                  </span>
-                </li>
+                <ProFeatureItem key={index} feature={feature} />
               ))}
             </ul>
 
@@ -116,6 +192,13 @@ export function Pricing({ onProAction }: PricingProps) {
               </button>
             </div>
           </div>
+        </div>
+
+        {/* Footnote */}
+        <div className="mt-12 text-center">
+          <p className="text-gray-500 text-sm">
+            * Multi-language support coming soon
+          </p>
         </div>
       </div>
     </section>

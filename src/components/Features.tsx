@@ -25,7 +25,6 @@ const features = [
     title: 'Tray & background mode',
     description: 'Close the window and keep PastePlay running in the tray so hotkeys always respond.',
     benefit: 'Always-on convenience.',
-    badge: 'Pro',
   },
   {
     icon: History,
