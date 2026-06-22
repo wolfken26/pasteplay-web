@@ -26,7 +26,7 @@ export function Hero() {
         </h1>
 
         <p className="text-xl sm:text-2xl text-gray-300 mb-10 leading-relaxed max-w-2xl mx-auto">
-          Turn any text into audio instantly — so you can absorb information while you work.
+          Unlike other TTS / text-to-speech apps, PastePlay lives in your system tray — no switching windows, no breaking focus. Just highlight, hit your hotkey, and listen.
         </p>
 
         <div className="mb-16 flex flex-col sm:flex-row gap-4 justify-center">
