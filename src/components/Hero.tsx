@@ -48,23 +48,55 @@ export function Hero() {
         </div>
 
 
-        <div className="flex justify-center">
+        <p className="text-sm text-gray-400 mt-12 mb-8">
+          Highlight any text, pick your hotkey (e.g., Ctrl+X or Command+Z), and start listening.
+        </p>
+
+        {/* Video Showcase Section */}
+        <div className="max-w-4xl mx-auto rounded-xl border border-gray-700 bg-gray-900/40 p-2 shadow-2xl shadow-blue-500/10 mb-16">
+          {/* Mock Desktop Window Bar */}
+          <div className="flex items-center justify-between px-3 py-2 border-b border-gray-800 bg-gray-950/80 rounded-t-lg">
+            <div className="flex gap-2">
+              <span className="w-3 h-3 rounded-full bg-red-500/80"></span>
+              <span className="w-3 h-3 rounded-full bg-yellow-500/80"></span>
+              <span className="w-3 h-3 rounded-full bg-green-500/80"></span>
+            </div>
+            <span className="text-xs text-gray-500 font-mono">PastePlay Demo</span>
+            <div className="w-12"></div>
+          </div>
+          {/* Video Player */}
+          <div className="relative aspect-video rounded-b-lg overflow-hidden bg-black">
+            <video 
+              src="/showcase.mp4" 
+              autoPlay 
+              muted 
+              loop 
+              playsInline 
+              controls
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+
+        <button className="mx-auto block p-2 hover:bg-gray-800/50 rounded-full transition-colors animate-bounce text-gray-400 hover:text-blue-400 mt-8 mb-16">
+          <ChevronDown className="w-6 h-6" />
+        </button>
+
+        {/* Check for updates button moved below ChevronDown */}
+        <div className="flex justify-center mb-12">
           <button onClick={() => setIsUpdatesModalOpen(true)} className="px-8 py-4 border-2 border-gray-700 text-gray-300 rounded-lg font-bold hover:border-blue-500 hover:bg-blue-600/10 transition-all inline-flex items-center justify-center gap-2">
             <Info className="w-5 h-5" />
             Check for updates
           </button>
         </div>
 
-        <p className="text-sm text-gray-400 mt-12 mb-12">
-          Highlight any text, pick your hotkey (e.g., Ctrl+X or Command+Z), and start listening.
-        </p>
-
+        {/* Privacy & Storage cards moved below ChevronDown */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
           viewport={{ once: true }}
-          className="mt-16 p-8 bg-gray-900/50 border border-gray-700 rounded-lg backdrop-blur-sm"
+          className="p-8 bg-gray-900/50 border border-gray-700 rounded-lg backdrop-blur-sm"
         >
           <div className="grid md:grid-cols-2 gap-8 text-left">
             <div className="flex items-start gap-4">
@@ -83,10 +115,6 @@ export function Hero() {
             </div>
           </div>
         </motion.div>
-
-        <button className="mx-auto block p-2 hover:bg-gray-800/50 rounded-full transition-colors animate-bounce text-gray-400 hover:text-blue-400 mt-16">
-          <ChevronDown className="w-6 h-6" />
-        </button>
       </div>
       <UpdatesModal isOpen={isUpdatesModalOpen} onClose={() => setIsUpdatesModalOpen(false)} />
     </section>
